@@ -118,7 +118,12 @@ function HeroSection() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <div className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 gap-3 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3">
+                <div
+                    onClick={() => {
+                        api?.scrollNext();
+                    }}
+                    className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 cursor-pointer gap-3 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] transition-transform hover:scale-105 sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3"
+                >
                     <img
                         src={images[next].src}
                         className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
