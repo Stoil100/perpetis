@@ -26,19 +26,19 @@ export default function Navigation() {
                 </div>
                 <div className="hidden md:flex space-x-8 text-lg lg:text-xl">
                     <Link
-                        href="#"
+                        href="#hero"
                         className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Начало
                     </Link>
                     <Link
-                        href="#"
+                        href="#gallery"
                         className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Галерия
                     </Link>
                     <Link
-                        href="#"
+                        href="#location"
                         className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Локация
