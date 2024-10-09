@@ -29,7 +29,7 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
-    const isMobile= useIsMobile();
+    const isMobile = useIsMobile();
     const autoplayDelay = 6000;
 
     useEffect(() => {
@@ -130,9 +130,12 @@ function HeroSection() {
                     {images.map((image, index) => (
                         <CarouselItem
                             key={index}
-                            className="flex items-center justify-center rounded-xl bg-gray-500 pl-0 sm:rounded-3xl lg:rounded-[50px]"
+                            className="rounded-xl bg-gray-500 pl-0 sm:rounded-3xl lg:rounded-[50px]"
                         >
-                            <img src={image.src} className="h-full w-full" />
+                            <img
+                                src={image.src}
+                                className="h-full w-full rounded-xl sm:rounded-3xl lg:rounded-[50px]"
+                            />
                         </CarouselItem>
                     ))}
                 </CarouselContent>

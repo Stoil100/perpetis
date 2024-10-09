@@ -18,29 +18,17 @@ export default function Footer() {
                         <p>бяла електротехника</p>
                     </div>
                 </div>
-                <div className="text-sm sm:text-base md:text-xl col-span-1 col-start-2 row-start-1 flex flex-wrap justify-between gap-2 font-bold sm:gap-4 md:col-span-2 md:col-start-3 md:row-start-1">
-                    <Link
-                        href="#hero"
-                        className="hover:underline"
-                    >
+                <div className="col-span-1 col-start-2 row-start-1 flex flex-wrap justify-between gap-2 text-sm font-bold sm:gap-4 sm:text-base md:col-span-2 md:col-start-3 md:row-start-1 md:text-xl">
+                    <Link href="#hero" className="hover:underline">
                         Начало
                     </Link>
-                    <Link
-                        href="#gallery"
-                        className="hover:underline"
-                    >
+                    <Link href="#gallery" className="hover:underline">
                         Галерия
                     </Link>
-                    <Link
-                        href="#location"
-                        className="hover:underline"
-                    >
+                    <Link href="#location" className="hover:underline">
                         Локация
                     </Link>
-                    <Link
-                        href="#"
-                        className="hover:underline"
-                    >
+                    <Link href="#" className="hover:underline">
                         Контакт
                     </Link>
                 </div>
