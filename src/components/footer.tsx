@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -17,31 +18,31 @@ export default function Footer() {
                         <p>бяла електротехника</p>
                     </div>
                 </div>
-                <div className="col-span-1 col-start-2 row-start-1 flex flex-wrap justify-between gap-2 font-bold sm:gap-4 md:col-span-2 md:col-start-3 md:row-start-1">
-                    <a
-                        href="#"
-                        className="text-sm hover:underline sm:text-base md:text-lg"
+                <div className="text-sm sm:text-base md:text-xl col-span-1 col-start-2 row-start-1 flex flex-wrap justify-between gap-2 font-bold sm:gap-4 md:col-span-2 md:col-start-3 md:row-start-1">
+                    <Link
+                        href="#hero"
+                        className="hover:underline"
                     >
                         Начало
-                    </a>
-                    <a
-                        href="#"
-                        className="text-sm hover:underline sm:text-base md:text-lg"
+                    </Link>
+                    <Link
+                        href="#gallery"
+                        className="hover:underline"
                     >
                         Галерия
-                    </a>
-                    <a
-                        href="#"
-                        className="text-sm hover:underline sm:text-base md:text-lg"
+                    </Link>
+                    <Link
+                        href="#location"
+                        className="hover:underline"
                     >
                         Локация
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="#"
-                        className="text-sm hover:underline sm:text-base md:text-lg"
+                        className="hover:underline"
                     >
                         Контакт
-                    </a>
+                    </Link>
                 </div>
                 <div className="col-span-1 col-start-2 row-span-1 row-start-2 flex flex-col justify-end space-y-2 md:col-span-2 md:col-start-3 md:row-start-2 md:flex-row md:items-end md:justify-between">
                     <div className="text-sm sm:text-base md:text-lg">

@@ -72,19 +72,19 @@ export default function Navigation() {
             {isOpen && (
                 <div className="bg-white px-4 py-2 text-center shadow-md md:hidden">
                     <Link
-                        href="#"
+                        href="#hero"
                         className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Начало
                     </Link>
                     <Link
-                        href="#"
+                        href="#gallery"
                         className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Галерия
                     </Link>
                     <Link
-                        href="#"
+                        href="#location"
                         className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Локация
