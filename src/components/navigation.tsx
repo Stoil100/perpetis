@@ -12,9 +12,9 @@ export default function Navigation() {
     };
 
     return (
-        <header className="w-full py-4 text-[#063971]  ">
+        <header className="w-full py-4 text-[#063971]">
             <nav className="flex w-full items-center justify-between px-4 md:px-8">
-                <div className="flex items-center z-10">
+                <div className="z-10 flex items-center">
                     <Image
                         src="/electronics.svg"
                         alt="Портетис"
@@ -22,9 +22,9 @@ export default function Navigation() {
                         height={36}
                         className="mr-2"
                     />
-                    <span className="font-semibold text-3xl">Перпетис</span>
+                    <span className="text-3xl font-semibold">Перпетис</span>
                 </div>
-                <div className="hidden md:flex space-x-8 text-lg lg:text-xl">
+                <div className="hidden space-x-8 text-lg md:flex lg:text-xl">
                     <Link
                         href="#hero"
                         className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
@@ -51,12 +51,9 @@ export default function Navigation() {
                     </Link>
                 </div>
                 <div className="md:hidden">
-                    <button
-                        onClick={toggleMenu}
-                        className="focus:outline-none"
-                    >
+                    <button onClick={toggleMenu} className="focus:outline-none">
                         <svg
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -73,28 +70,28 @@ export default function Navigation() {
                 </div>
             </nav>
             {isOpen && (
-                <div className="md:hidden text-center px-4 py-2 bg-white shadow-md">
+                <div className="bg-white px-4 py-2 text-center shadow-md md:hidden">
                     <Link
                         href="#"
-                        className="block rounded-full border-2 border-white bg-white px-5 py-2 mt-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
+                        className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Начало
                     </Link>
                     <Link
                         href="#"
-                        className="block rounded-full border-2 border-white bg-white px-5 py-2 mt-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
+                        className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Галерия
                     </Link>
                     <Link
                         href="#"
-                        className="block rounded-full border-2 border-white bg-white px-5 py-2 mt-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
+                        className="mt-2 block rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Локация
                     </Link>
                     <Link
                         href="#"
-                        className="block rounded-full border-2 border-[#063971] bg-[#063971] px-4 py-2 mt-2 text-white drop-shadow-[2px_3px_#8F8F8F] transition-all hover:bg-white hover:text-[#063971]"
+                        className="mt-2 block rounded-full border-2 border-[#063971] bg-[#063971] px-4 py-2 text-white drop-shadow-[2px_3px_#8F8F8F] transition-all hover:bg-white hover:text-[#063971]"
                     >
                         Контакти
                     </Link>

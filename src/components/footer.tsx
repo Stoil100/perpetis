@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="relative text-white">
             <div className="absolute inset-0 h-full w-full bg-[url('/background.png')] bg-cover bg-center" />
             <div className="relative grid grid-cols-2 grid-rows-2 gap-4 bg-[#063971]/95 px-6 py-6 md:grid-cols-4 md:px-40 md:py-8">
-                <div className="col-span- md:col-span-2 row-span-2 space-y-4 flex flex-col justify-between">
+                <div className="col-span- row-span-2 flex flex-col justify-between space-y-4 md:col-span-2">
                     <Image
                         src="/logo.png"
                         width={150}
@@ -18,7 +18,7 @@ export default function Footer() {
                         <p>бяла електротехника</p>
                     </div>
                 </div>
-                <div className="col-span-1 col-start-2 row-start-1 flex-wrap font-bold flex justify-between gap-2 sm:gap-4 md:col-span-2 md:col-start-3 md:row-start-1">
+                <div className="col-span-1 col-start-2 row-start-1 flex flex-wrap justify-between gap-2 font-bold sm:gap-4 md:col-span-2 md:col-start-3 md:row-start-1">
                     <a
                         href="#"
                         className="text-sm hover:underline sm:text-base md:text-lg"
@@ -44,7 +44,7 @@ export default function Footer() {
                         Контакт
                     </a>
                 </div>
-                <div className="col-span-1 md:col-span-2 row-span-1 justify-end col-start-2 row-start-2 flex flex-col space-y-2 md:col-start-3 md:row-start-2 md:flex-row md:items-end md:justify-between">
+                <div className="col-span-1 col-start-2 row-span-1 row-start-2 flex flex-col justify-end space-y-2 md:col-span-2 md:col-start-3 md:row-start-2 md:flex-row md:items-end md:justify-between">
                     <div className="text-sm sm:text-base md:text-lg">
                         <p>Локация</p>
                         <p>Ул. Свещаров 10, Варна</p>
