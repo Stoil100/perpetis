@@ -69,7 +69,7 @@ function HeroSection() {
                                 електротехника
                             </span>
                             <div className="hidden md:block">
-                                <img src="/shape.svg" className="w-5" />
+                                <img src="/shape.svg" alt="Декорация" className="w-5" />
                             </div>
                         </div>
                     </div>
@@ -134,6 +134,7 @@ function HeroSection() {
                         >
                             <img
                                 src={image.src}
+                                alt={image.alt}
                                 className="h-full w-full rounded-xl sm:rounded-3xl lg:rounded-[50px]"
                             />
                         </CarouselItem>
@@ -149,6 +150,7 @@ function HeroSection() {
                         >
                             <img
                                 src={images[next].src}
+                                alt={images[next].alt}
                                 className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
                             />
                             <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
@@ -186,7 +188,6 @@ function HeroSection() {
         </section>
     );
 }
-
 function GallerySection() {
     const tools: Tools = [
         {
@@ -233,7 +234,7 @@ function LocationSection() {
                 </div>
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     <div className="flex items-center gap-1">
-                        <img src="/viber.svg" width={36} />
+                        <img src="/viber.svg" alt="Вайбър" width={36} />
                         <p>
                             Моля свържете се с мен чрез{" "}
                             <span className="font-bold text-purple-500 underline">
