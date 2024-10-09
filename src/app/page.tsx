@@ -118,7 +118,7 @@ function HeroSection() {
                 ]}
                 opts={{
                     loop: true,
-                    watchDrag: screen.height < 640 ? true : false,
+                    watchDrag: window!.innerWidth < 640 ? true : false,
                     align: "start",
                 }}
                 setApi={setApi}
