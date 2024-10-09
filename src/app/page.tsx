@@ -17,7 +17,7 @@ import {
     MapPin,
     PhoneCall,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay"
 
 
