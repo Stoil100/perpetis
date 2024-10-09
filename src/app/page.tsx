@@ -17,7 +17,9 @@ import {
     MapPin,
     PhoneCall,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Autoplay from "embla-carousel-autoplay"
+
 
 function HeroSection() {
     const images = [
@@ -27,12 +29,14 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
+    const progressBarRef = useRef<HTMLDivElement>(null);
+    const autoplayDelay = 6000;
+
     useEffect(() => {
         if (!api) {
             return;
         }
         setNext(api.selectedScrollSnap() + 1);
-
         api.on("select", () => {
             setNext(
                 api.selectedScrollSnap() + 1 === images.length
@@ -41,8 +45,12 @@ function HeroSection() {
             );
         });
     }, [api]);
+
     return (
-        <section id="hero" className="flex flex-col gap-2 py-8 md:flex-row md:gap-6">
+        <section
+            id="hero"
+            className="flex flex-col gap-2 py-8 md:flex-row md:gap-6"
+        >
             <div className="flex flex-col justify-between md:w-1/3">
                 <div className="flex flex-col-reverse md:block">
                     <div className="flex items-center">
@@ -75,7 +83,7 @@ function HeroSection() {
                     </div>
 
                     <div className="w-fit space-x-4">
-                        {api && (
+                        {api && images && (
                             <>
                                 <Button
                                     variant="outline"
@@ -101,8 +109,18 @@ function HeroSection() {
                 </div>
             </div>
             <Carousel
+                plugins={[
+                    Autoplay({
+                        delay: autoplayDelay,
+                        stopOnInteraction: false,
+                        stopOnMouseEnter: false,
+                        stopOnFocusIn: false,
+                        stopOnLastSnap: false,
+                    }),
+                ]}
                 opts={{
                     loop: true,
+                    watchDrag: screen.height < 640 ? true : false,
                     align: "start",
                 }}
                 setApi={setApi}
@@ -118,40 +136,45 @@ function HeroSection() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <div
-                    onClick={() => {
-                        api?.scrollNext();
-                    }}
-                    className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 cursor-pointer gap-3 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] transition-transform hover:scale-105 sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3"
-                >
-                    <img
-                        src={images[next].src}
-                        className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
-                    />
-                    <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
-                        <p className="text-gray-400">Следваща снимка</p>
-                        <h4 className="lg:text-xl">{images[next].alt}</h4>
-                        <p>Ser. No {images[next].serNo}</p>
-                    </div>
-                </div>
-                {api && (
-                    <div className="absolute bottom-4 right-8 lg:bottom-8">
-                        <div className="hidden w-full gap-2 md:flex">
-                            {images.map((_, index) => (
-                                <div
-                                    key={index}
-                                    className={cn(
-                                        "h-1 w-4 cursor-pointer rounded-full bg-[#0C71E0] drop-shadow-lg transition-all",
-                                        api?.selectedScrollSnap() === index &&
-                                            "w-6 bg-[#063971]",
-                                    )}
-                                    onClick={() => {
-                                        api?.scrollTo(index);
-                                    }}
-                                />
-                            ))}
+                {api && images && (
+                    <>
+                        <div
+                            onClick={() => {
+                                api?.scrollNext();
+                            }}
+                            className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 cursor-pointer gap-2 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] transition-transform hover:scale-105 sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3"
+                        >
+                            <img
+                                src={images[next].src}
+                                className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
+                            />
+                            <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
+                                <p className="text-gray-400">Следваща снимка</p>
+                                <h4 className="lg:text-xl">
+                                    {images[next].alt}
+                                </h4>
+                                <p>Ser. No {images[next].serNo}</p>
+                            </div>
                         </div>
-                    </div>
+
+                        <div className="absolute bottom-4 right-8 lg:bottom-8">
+                            <div className="hidden w-full gap-2 md:flex">
+                                {images.map((_, index) => (
+                                    <div
+                                        key={index}
+                                        className={cn(
+                                            "h-1 w-4 cursor-pointer rounded-full bg-[#0C71E0] drop-shadow-lg transition-all",
+                                            api?.selectedScrollSnap() ===
+                                                index && "w-6 bg-[#063971]",
+                                        )}
+                                        onClick={() => {
+                                            api?.scrollTo(index);
+                                        }}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </>
                 )}
             </Carousel>
             <Button className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden">
@@ -160,6 +183,7 @@ function HeroSection() {
         </section>
     );
 }
+
 
 function GallerySection() {
     const tools: Tools = [
