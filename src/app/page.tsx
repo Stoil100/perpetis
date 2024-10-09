@@ -29,7 +29,6 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
-    const progressBarRef = useRef<HTMLDivElement>(null);
     const autoplayDelay = 6000;
 
     useEffect(() => {
