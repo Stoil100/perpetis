@@ -8,6 +8,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
+import useIsMobile from "@/hooks/isMobile";
 import { cn } from "@/lib/utils";
 import { Tools } from "@/types/tool";
 import Autoplay from "embla-carousel-autoplay";
@@ -28,6 +29,7 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
+    const isMobile= useIsMobile();
     const autoplayDelay = 6000;
 
     useEffect(() => {
@@ -118,7 +120,7 @@ function HeroSection() {
                 ]}
                 opts={{
                     loop: true,
-                    watchDrag: window!.innerWidth < 640 ? true : false,
+                    watchDrag: isMobile,
                     align: "start",
                 }}
                 setApi={setApi}
