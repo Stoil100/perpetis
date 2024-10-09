@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { Tools } from "@/types/tool";
+import Autoplay from "embla-carousel-autoplay";
 import {
     ArrowLeft,
     ArrowRight,
@@ -18,7 +19,6 @@ import {
     PhoneCall,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
 
 function HeroSection() {
     const images = [

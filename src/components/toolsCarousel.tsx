@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import {
     Carousel,
     CarouselApi,
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
-import Image from "next/image";
 import { Tool } from "@/types/tool";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 export default function ToolsCarousel({ ...tool }: Tool) {
     const [progress, setProgress] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
