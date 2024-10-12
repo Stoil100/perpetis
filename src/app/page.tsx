@@ -19,6 +19,7 @@ import {
     MapPin,
     PhoneCall,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function HeroSection() {
@@ -29,6 +30,7 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
+    const router=useRouter();
     const isMobile = useIsMobile();
     const autoplayDelay = 6000;
 
@@ -81,7 +83,7 @@ function HeroSection() {
                 <div className="hidden space-y-2 md:block md:space-y-4 lg:space-y-16">
                     <div className="space-y-2">
                         <p>Нуждаете се от ремонт на бяла електротехника</p>
-                        <Button className="rounded-full bg-[#063971] text-xl">
+                        <Button onClick={()=>{router.push("#location")}} className="rounded-full bg-[#063971] text-xl">
                             Контакт
                         </Button>
                     </div>
@@ -191,7 +193,7 @@ function HeroSection() {
                     )}
                 </Carousel>
             </div>
-            <Button className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden">
+            <Button onClick={()=>{router.push("#location")}} className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden">
                 Контакт
             </Button>
         </section>

@@ -28,7 +28,7 @@ export default function Footer() {
                     <Link href="#location" className="hover:underline">
                         Локация
                     </Link>
-                    <Link href="#" className="hover:underline">
+                    <Link href="#location" className="hover:underline">
                         Контакт
                     </Link>
                 </div>

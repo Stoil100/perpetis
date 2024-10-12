@@ -44,7 +44,7 @@ export default function Navigation() {
                         Локация
                     </Link>
                     <Link
-                        href="#"
+                        href="#location"
                         className="rounded-full border-2 border-[#063971] bg-[#063971] px-4 py-2 text-white drop-shadow-[2px_3px_#8F8F8F] transition-all hover:bg-white hover:text-[#063971]"
                     >
                         Контакти
@@ -90,7 +90,7 @@ export default function Navigation() {
                         Локация
                     </Link>
                     <Link
-                        href="#"
+                        href="#location"
                         className="mt-2 block rounded-full border-2 border-[#063971] bg-[#063971] px-4 py-2 text-white drop-shadow-[2px_3px_#8F8F8F] transition-all hover:bg-white hover:text-[#063971]"
                     >
                         Контакти
