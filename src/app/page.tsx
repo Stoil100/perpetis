@@ -69,7 +69,11 @@ function HeroSection() {
                                 електротехника
                             </span>
                             <div className="hidden md:block">
-                                <img src="/shape.svg" alt="Декорация" className="w-5" />
+                                <img
+                                    src="/shape.svg"
+                                    alt="Декорация"
+                                    className="w-5"
+                                />
                             </div>
                         </div>
                     </div>
@@ -108,80 +112,85 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
-            <Carousel
-                plugins={[
-                    Autoplay({
-                        delay: autoplayDelay,
-                        stopOnInteraction: false,
-                        stopOnMouseEnter: false,
-                        stopOnFocusIn: false,
-                        stopOnLastSnap: false,
-                    }),
-                ]}
-                opts={{
-                    loop: true,
-                    watchDrag: isMobile,
-                    align: "start",
-                }}
-                setApi={setApi}
-                className="w-full"
-            >
-                <CarouselContent className="ml-0 aspect-video">
-                    {images.map((image, index) => (
-                        <CarouselItem
-                            key={index}
-                            className="rounded-xl bg-gray-500 pl-0 sm:rounded-3xl lg:rounded-[50px]"
-                        >
-                            <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="h-full w-full rounded-xl sm:rounded-3xl lg:rounded-[50px]"
-                            />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                {api && images && (
-                    <>
-                        <div
-                            onClick={() => {
-                                api?.scrollNext();
-                            }}
-                            className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 cursor-pointer gap-2 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] transition-transform hover:scale-105 sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3"
-                        >
-                            <img
-                                src={images[next].src}
-                                alt={images[next].alt}
-                                className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
-                            />
-                            <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
-                                <p className="text-gray-400">Следваща снимка</p>
-                                <h4 className="lg:text-xl">
-                                    {images[next].alt}
-                                </h4>
-                                <p>Ser. No {images[next].serNo}</p>
+            <div className="relative w-full">
+                <div className="absolute h-full w-full rounded-xl bg-white drop-shadow-[3px_3px_#8F8F8F] sm:rounded-3xl md:drop-shadow-[4px_4px_#8F8F8F] lg:rounded-[50px]" />
+                <Carousel
+                    plugins={[
+                        Autoplay({
+                            delay: autoplayDelay,
+                            stopOnInteraction: false,
+                            stopOnMouseEnter: false,
+                            stopOnFocusIn: false,
+                            stopOnLastSnap: false,
+                        }),
+                    ]}
+                    opts={{
+                        loop: true,
+                        watchDrag: isMobile,
+                        align: "start",
+                    }}
+                    setApi={setApi}
+                    className="w-full"
+                >
+                    <CarouselContent className="ml-0 aspect-video">
+                        {images.map((image, index) => (
+                            <CarouselItem
+                                key={index}
+                                className="rounded-xl bg-gray-500 pl-0 sm:rounded-3xl lg:rounded-[50px]"
+                            >
+                                <img
+                                    src={image.src}
+                                    alt={image.alt}
+                                    className="h-full w-full rounded-xl sm:rounded-3xl lg:rounded-[50px]"
+                                />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    {api && images && (
+                        <>
+                            <div
+                                onClick={() => {
+                                    api?.scrollNext();
+                                }}
+                                className="absolute bottom-4 left-4 hidden h-1/3 w-fit max-w-96 cursor-pointer gap-2 rounded-xl bg-white p-2 drop-shadow-[2px_3px_#8F8F8F] transition-transform hover:scale-105 sm:flex lg:h-1/4 lg:rounded-[30px] lg:p-3"
+                            >
+                                <img
+                                    src={images[next].src}
+                                    alt={images[next].alt}
+                                    className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
+                                />
+                                <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
+                                    <p className="text-gray-400">
+                                        Следваща снимка
+                                    </p>
+                                    <h4 className="lg:text-xl">
+                                        {images[next].alt}
+                                    </h4>
+                                    <p>Ser. No {images[next].serNo}</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="absolute bottom-4 right-8 lg:bottom-8">
-                            <div className="hidden w-full gap-2 md:flex">
-                                {images.map((_, index) => (
-                                    <div
-                                        key={index}
-                                        className={cn(
-                                            "h-1 w-4 cursor-pointer rounded-full bg-[#0C71E0] drop-shadow-lg transition-all",
-                                            api?.selectedScrollSnap() ===
-                                                index && "w-6 bg-[#063971]",
-                                        )}
-                                        onClick={() => {
-                                            api?.scrollTo(index);
-                                        }}
-                                    />
-                                ))}
+                            <div className="absolute bottom-4 right-8 lg:bottom-8">
+                                <div className="hidden w-full gap-2 md:flex">
+                                    {images.map((_, index) => (
+                                        <div
+                                            key={index}
+                                            className={cn(
+                                                "h-1 w-4 cursor-pointer rounded-full bg-[#0C71E0] drop-shadow-lg transition-all",
+                                                api?.selectedScrollSnap() ===
+                                                    index && "w-6 bg-[#063971]",
+                                            )}
+                                            onClick={() => {
+                                                api?.scrollTo(index);
+                                            }}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </>
-                )}
-            </Carousel>
+                        </>
+                    )}
+                </Carousel>
+            </div>
             <Button className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden">
                 Контакт
             </Button>
