@@ -42,7 +42,7 @@ export default function ToolsCarousel({ ...tool }: Tool) {
                         {tool.images.map((image, index) => (
                             <CarouselItem
                                 key={index}
-                                className="flex max-w-[300px] justify-center rounded-xl border-b-2 border-gray-400 bg-black py-4 first:ml-4"
+                                className="flex max-w-[300px] justify-center rounded-xl border-b-2 border-gray-400 bg-black px-0 py-4 first:ml-4"
                             >
                                 <Image
                                     src={image}
