@@ -12,9 +12,9 @@ export default function Navigation() {
     };
 
     return (
-        <header className="w-full py-4 text-[#063971] px-4 md:px-10 2xl:px-20">
+        <header className="w-full px-4 py-4 text-[#063971] md:px-10 2xl:px-20">
             <nav className="flex w-full items-center justify-between">
-                <div className="z-10 flex items-center">
+                <Link href={"#home"} className="z-10 flex items-center">
                     <Image
                         src="/electronics.svg"
                         alt="Портетис"
@@ -23,7 +23,7 @@ export default function Navigation() {
                         className="mr-2"
                     />
                     <span className="text-3xl font-semibold">Перпетис</span>
-                </div>
+                </Link>
                 <div className="hidden space-x-8 text-lg md:flex lg:text-xl">
                     <Link
                         href="#hero"
