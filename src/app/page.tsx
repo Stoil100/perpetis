@@ -277,7 +277,7 @@ function LocationSection() {
 }
 export default function Home() {
     return (
-        <main className="lg::px-20 min-h-screen px-4 text-[#063971] md:px-10">
+        <main className="2xl:px-20 min-h-screen px-4 text-[#063971] md:px-10">
             <HeroSection />
             <GallerySection />
             <LocationSection />

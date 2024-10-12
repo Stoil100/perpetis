@@ -12,8 +12,8 @@ export default function Navigation() {
     };
 
     return (
-        <header className="w-full py-4 text-[#063971]">
-            <nav className="flex w-full items-center justify-between px-4 md:px-8">
+        <header className="w-full py-4 text-[#063971] px-4 md:px-10 2xl:px-20">
+            <nav className="flex w-full items-center justify-between">
                 <div className="z-10 flex items-center">
                     <Image
                         src="/electronics.svg"
