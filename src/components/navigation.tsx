@@ -27,7 +27,7 @@ export default function Navigation() {
                 <div className="hidden space-x-8 text-lg md:flex lg:text-xl">
                     <Link
                         href="#hero"
-                        className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:px-4 hover:drop-shadow-[2px_3px_#8F8F8F]"
+                        className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:drop-shadow-[2px_3px_#8F8F8F]"
                     >
                         Начало
                     </Link>
