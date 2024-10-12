@@ -30,7 +30,7 @@ function HeroSection() {
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
-    const router=useRouter();
+    const router = useRouter();
     const isMobile = useIsMobile();
     const autoplayDelay = 6000;
 
@@ -51,7 +51,7 @@ function HeroSection() {
     return (
         <section
             id="hero"
-            className="flex flex-col gap-2 py-8 md:flex-row md:gap-6"
+            className="mb-10 flex flex-col gap-2 py-8 md:flex-row md:gap-6"
         >
             <div className="flex flex-col justify-between md:w-1/3">
                 <div className="flex flex-col-reverse md:block">
@@ -83,7 +83,12 @@ function HeroSection() {
                 <div className="hidden space-y-2 md:block md:space-y-4 lg:space-y-16">
                     <div className="space-y-2">
                         <p>Нуждаете се от ремонт на бяла електротехника</p>
-                        <Button onClick={()=>{router.push("#location")}} className="rounded-full bg-[#063971] text-xl">
+                        <Button
+                            onClick={() => {
+                                router.push("#location");
+                            }}
+                            className="rounded-full bg-[#063971] text-xl"
+                        >
                             Контакт
                         </Button>
                     </div>
@@ -193,7 +198,12 @@ function HeroSection() {
                     )}
                 </Carousel>
             </div>
-            <Button onClick={()=>{router.push("#location")}} className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden">
+            <Button
+                onClick={() => {
+                    router.push("#location");
+                }}
+                className="rounded-full bg-[#063971] text-xl drop-shadow-[2px_2px_#8F8F8F] md:hidden"
+            >
                 Контакт
             </Button>
         </section>
@@ -214,7 +224,10 @@ function GallerySection() {
         },
     ];
     return (
-        <section id="gallery" className="flex w-full flex-col items-center">
+        <section
+            id="gallery"
+            className="my-10 flex w-full flex-col items-center"
+        >
             <h1 className="max-w-4xl text-center text-4xl md:text-6xl">
                 Ремонтни дейности на редица производители
             </h1>
@@ -228,7 +241,7 @@ function LocationSection() {
     return (
         <section
             id="location"
-            className="flex flex-col items-center justify-around gap-8 py-4 md:text-xl lg:flex-row"
+            className="my-10 flex flex-col items-center justify-around gap-8 py-4 md:text-xl lg:flex-row"
         >
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.732935299655!2d27.915633569806786!3d43.21851176439716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4546c3f4749f9%3A0xfc264caf43ad9b6d!2z0JLQsNGA0L3QsCDQptC10L3RgtGK0YDQn9GA0LjQvNC-0YDRgdC60LgsINGD0LsuIOKAntCf0L7Qu9C60L7QstC90LjQuiDQodCy0LXRidCw0YDQvtCy4oCcIDEwLCA5MDAyINCS0LDRgNC90LA!5e0!3m2!1sbg!2sbg!4v1727845336376!5m2!1sbg!2sbg"
@@ -236,7 +249,7 @@ function LocationSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
             <div className="space-y-6">
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     Можете да намерите сервиза на адрес:
@@ -277,7 +290,7 @@ function LocationSection() {
 }
 export default function Home() {
     return (
-        <main className="2xl:px-20 min-h-screen px-4 text-[#063971] md:px-10">
+        <main className="min-h-screen px-4 text-[#063971] md:px-10 2xl:px-20">
             <HeroSection />
             <GallerySection />
             <LocationSection />
