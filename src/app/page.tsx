@@ -72,11 +72,14 @@ function HeroSection() {
                     </div>
 
                     <div className="z-10 text-[2rem] md:absolute md:text-[3.9vw]">
-                        <div className="flex items-end">
-                            <span className="inline-block rounded-tr-xl bg-white pr-4 lg:rounded-tr-3xl">
-                                Твоят сервиз за
+                        <span className="inline-block bg-white pr-4 md:rounded-br-xl md:rounded-tr-xl lg:rounded-br-3xl lg:rounded-tr-3xl">
+                            Твоят сервиз за бяла
+                        </span>
+                        <div className="flex">
+                            <span className="inline-block rounded-br-xl bg-white pr-4 lg:rounded-br-3xl">
+                                и нестандартна
                             </span>
-                            <div className="hidden -rotate-90 md:block">
+                            <div className="hidden md:block">
                                 <Image
                                     src="/global/shape.svg"
                                     alt="Декорация"
@@ -85,12 +88,9 @@ function HeroSection() {
                                 />
                             </div>
                         </div>
-                        <span className="inline-block bg-white pr-4 md:rounded-br-xl md:rounded-tr-xl lg:rounded-br-3xl lg:rounded-tr-3xl">
-                            битова и нестандартна
-                        </span>
                         <div className="flex">
                             <span className="inline-block bg-white pr-4 md:rounded-br-xl lg:rounded-br-3xl">
-                                електротехника
+                                електроника
                             </span>
                             <div className="hidden md:block">
                                 <Image
@@ -109,7 +109,7 @@ function HeroSection() {
                             onClick={() => {
                                 router.push("#location");
                             }}
-                            className="rounded-full bg-[#063971] text-3xl py-6 lg:py-8 px-6"
+                            className="rounded-full bg-[#063971] p-5 text-2xl lg:py-6 lg:text-3xl"
                         >
                             Контакт
                         </Button>
@@ -189,10 +189,10 @@ function HeroSection() {
                                     className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
                                 />
                                 <div className="md:text-md flex h-full flex-col justify-end overflow-hidden text-ellipsis">
-                                <h4 className="lg:text-xl">
+                                    <h4 className="lg:text-xl">
                                         {images[next].alt}
                                     </h4>
-                                    
+
                                     <p className="text-gray-400">
                                         Следваща снимка
                                     </p>
@@ -307,7 +307,7 @@ function LocationSection() {
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     Можете да намерите сервиза ни на адрес:
                     <br />
-                    Ул. <q className="italic mr-2">Полк. Свещаров</q> 10, Варна
+                    Ул. <q className="mr-2 italic">Полк. Свещаров</q> 10, Варна
                 </div>
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     <div className="flex items-center gap-1">
@@ -333,8 +333,9 @@ function LocationSection() {
                     <div className="flex items-center gap-1">
                         <MapPin />
                         <p>
-                            Ул. <q className="italic mr-2">Полковник Свещаров</q>10 Варна,
-                            България
+                            Ул.{" "}
+                            <q className="mr-2 italic">Полковник Свещаров</q>10
+                            Варна, България
                         </p>
                     </div>
                     <div className="flex items-center gap-1">

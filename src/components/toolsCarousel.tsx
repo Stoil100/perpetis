@@ -25,7 +25,7 @@ export default function ToolsCarousel({ ...tool }: Tool) {
         };
     }, [api]);
     return (
-        <div className="w-full py-8">
+        <div className="w-full py-4 md:py-8">
             <div className="flex w-full flex-col items-center gap-4 md:flex-row md:items-end">
                 <p className="text-2xl md:text-4xl">{tool.title}</p>
                 <Carousel
