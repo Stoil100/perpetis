@@ -318,7 +318,7 @@ function LocationSection() {
                             height={36}
                         />
                         <p>
-                            Моля свържете се с мен чрез{" "}
+                            Можете да се свържете с нас чрез{" "}
                             <span className="font-bold text-purple-500 underline">
                                 Viber
                             </span>
