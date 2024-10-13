@@ -24,7 +24,7 @@ export default function Navigation() {
                     />
                     <span className="text-3xl font-semibold">Перпетис</span>
                 </Link>
-                <div className="hidden space-x-8 text-lg md:flex lg:text-xl">
+                <div className="hidden space-x-6 text-lg md:flex lg:text-xl">
                     <Link
                         href="#hero"
                         className="rounded-full border-2 border-white bg-white px-5 py-2 transition-all hover:border-[#063971] hover:drop-shadow-[2px_3px_#8F8F8F]"

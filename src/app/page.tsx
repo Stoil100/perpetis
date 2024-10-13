@@ -105,14 +105,11 @@ function HeroSection() {
                 </div>
                 <div className="z-50 hidden space-y-2 md:block md:space-y-4 lg:space-y-16">
                     <div className="space-y-2">
-                        <p className="hidden lg:block lg:text-xs xl:text-base">
-                            Нуждаете се от ремонт на бяла електротехника
-                        </p>
                         <Button
                             onClick={() => {
                                 router.push("#location");
                             }}
-                            className="rounded-full bg-[#063971] text-xl"
+                            className="rounded-full bg-[#063971] text-3xl py-6 lg:py-8 px-6"
                         >
                             Контакт
                         </Button>
@@ -168,7 +165,7 @@ function HeroSection() {
                         {images.map((image, index) => (
                             <CarouselItem
                                 key={index}
-                                className="rounded-xl bg-gray-500 pl-0 sm:rounded-3xl lg:rounded-[50px]"
+                                className="rounded-xl bg-gray-400 pl-0 sm:rounded-3xl lg:rounded-[50px]"
                             >
                                 <img
                                     src={image.src}
@@ -191,14 +188,14 @@ function HeroSection() {
                                     alt={images[next].alt}
                                     className="aspect-square h-full rounded bg-gray-500 lg:rounded-[20px]"
                                 />
-                                <div className="md:text-md flex h-full flex-col justify-between overflow-hidden text-ellipsis">
+                                <div className="md:text-md flex h-full flex-col justify-end overflow-hidden text-ellipsis">
+                                <h4 className="lg:text-xl">
+                                        {images[next].alt}
+                                    </h4>
+                                    
                                     <p className="text-gray-400">
                                         Следваща снимка
                                     </p>
-                                    <h4 className="lg:text-xl">
-                                        {images[next].alt}
-                                    </h4>
-                                    <p>Ser. No {images[next].serNo}</p>
                                 </div>
                             </div>
 
@@ -284,8 +281,8 @@ function GallerySection() {
             id="gallery"
             className="my-10 flex w-full flex-col items-center"
         >
-            <h1 className="max-w-4xl text-center text-4xl md:text-6xl">
-                Ремонтни дейности на редица производители
+            <h1 className="max-w-4xl text-center text-3xl md:text-5xl">
+                Галерия
             </h1>
             {tools.map((tool, index) => (
                 <ToolsCarousel key={index} {...tool} />
@@ -308,9 +305,9 @@ function LocationSection() {
             />
             <div className="space-y-6">
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
-                    Можете да намерите сервиза на адрес:
+                    Можете да намерите сервиза ни на адрес:
                     <br />
-                    Ул. Свещаров 10
+                    Ул. <q className="italic mr-2">Полк. Свещаров</q> 10, Варна
                 </div>
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     <div className="flex items-center gap-1">
@@ -336,7 +333,7 @@ function LocationSection() {
                     <div className="flex items-center gap-1">
                         <MapPin />
                         <p>
-                            Ул. <cite>Полковник Свещаров</cite> 10 Варна,
+                            Ул. <q className="italic mr-2">Полковник Свещаров</q>10 Варна,
                             България
                         </p>
                     </div>
