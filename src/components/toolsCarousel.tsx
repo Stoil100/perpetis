@@ -6,7 +6,6 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import { Tool } from "@/types/tool";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 export default function ToolsCarousel({ ...tool }: Tool) {
     const [progress, setProgress] = useState(0);
