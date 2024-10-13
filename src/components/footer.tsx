@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="relative text-white">
-            <div className="absolute inset-0 h-full w-full bg-[url('/background.png')] bg-cover bg-center" />
+            <div className="absolute inset-0 h-full w-full bg-[url('/global/background.png')] bg-cover bg-center" />
             <div className="relative grid grid-cols-2 grid-rows-2 gap-4 bg-[#063971]/95 px-6 py-6 md:grid-cols-4 md:px-40 md:py-8">
                 <div className="col-span- row-span-2 flex flex-col justify-between space-y-4 md:col-span-2">
                     <Link href={"#home"} className="w-fit">
                         <Image
-                            src="/logo.png"
+                            src="/global/logo.png"
                             width={150}
                             height={150}
                             alt="Logo"

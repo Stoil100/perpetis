@@ -16,7 +16,7 @@ export default function Navigation() {
             <nav className="flex w-full items-center justify-between">
                 <Link href={"#home"} className="z-10 flex items-center">
                     <Image
-                        src="/electronics.svg"
+                        src="/global/electronics.svg"
                         alt="Портетис"
                         width={36}
                         height={36}

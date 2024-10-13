@@ -28,7 +28,7 @@ export default function ToolsCarousel({ ...tool }: Tool) {
     return (
         <div className="w-full py-4">
             <div className="flex w-full flex-col items-center gap-4 md:flex-row md:items-end">
-                <p className="text-xl">{tool.title}</p>
+                <p className="text-2xl md:text-4xl">{tool.title}</p>
                 <Carousel
                     setApi={setApi}
                     opts={{
@@ -42,13 +42,12 @@ export default function ToolsCarousel({ ...tool }: Tool) {
                         {tool.images.map((image, index) => (
                             <CarouselItem
                                 key={index}
-                                className="flex max-w-[300px] justify-center rounded-xl border-b-2 border-gray-400 bg-black px-0 py-4 first:ml-4"
+                                className="flex aspect-video max-w-[300px] justify-center rounded-2xl border-b-2 border-gray-400 bg-black px-0 first:ml-4 md:max-w-[400px]"
                             >
-                                <Image
-                                    src={image}
-                                    width={150}
-                                    height={150}
-                                    alt="Logo"
+                                <img
+                                    src={`/gallery/${tool.title}/${image}`}
+                                    alt={image}
+                                    className="w-full"
                                 />
                             </CarouselItem>
                         ))}

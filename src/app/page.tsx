@@ -19,14 +19,23 @@ import {
     MapPin,
     PhoneCall,
 } from "lucide-react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function HeroSection() {
     const images = [
-        { src: "/logo.png", alt: "Bosch Inverter", serNo: "215 789 3458" },
-        { src: "/background.png", alt: "Bosch Not Inverter" },
-        { src: "/logo.png", alt: "Bosch Inverter", serNo: "215 789 3458" },
+        {
+            src: "/hero/AEG_DISPLAY_2_UP_16x9.png",
+            alt: "AEG Display",
+            serNo: "215 789 3458",
+        },
+        { src: "/hero/BOSCH_NEC_UP_16x9.png", alt: "Bosch Nec Up" },
+        {
+            src: "/hero/MIELE_EDITION_UP_16x9.png",
+            alt: "Miele Edition Up",
+            serNo: "215 789 3458",
+        },
     ];
     const [next, setNext] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
@@ -61,28 +70,44 @@ function HeroSection() {
                             Перпетис Сервиз
                         </p>
                     </div>
-                    <div className="z-10 text-[2.4rem] md:absolute md:text-[3.9vw]">
-                        <span className="inline-block rounded-t-3xl rounded-br-3xl bg-white pr-4">
-                            Твоят сервиз за бяла
+
+                    <div className="z-10 text-[2rem] md:absolute md:text-[3.9vw]">
+                        <div className="flex items-end">
+                            <span className="inline-block rounded-tr-xl bg-white pr-4 lg:rounded-tr-3xl">
+                                Твоят сервиз за
+                            </span>
+                            <div className="hidden -rotate-90 md:block">
+                                <Image
+                                    src="/global/shape.svg"
+                                    alt="Декорация"
+                                    width={20}
+                                    height={20}
+                                />
+                            </div>
+                        </div>
+                        <span className="inline-block bg-white pr-4 md:rounded-br-xl md:rounded-tr-xl lg:rounded-br-3xl lg:rounded-tr-3xl">
+                            битова и нестандартна
                         </span>
-                        <br />
                         <div className="flex">
-                            <span className="inline-block rounded-b-3xl bg-white pr-4">
+                            <span className="inline-block bg-white pr-4 md:rounded-br-xl lg:rounded-br-3xl">
                                 електротехника
                             </span>
                             <div className="hidden md:block">
-                                <img
-                                    src="/shape.svg"
+                                <Image
+                                    src="/global/shape.svg"
                                     alt="Декорация"
-                                    className="w-5"
+                                    width={20}
+                                    height={20}
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="hidden space-y-2 md:block md:space-y-4 lg:space-y-16">
+                <div className="z-50 hidden space-y-2 md:block md:space-y-4 lg:space-y-16">
                     <div className="space-y-2">
-                        <p>Нуждаете се от ремонт на бяла електротехника</p>
+                        <p className="hidden lg:block lg:text-xs xl:text-base">
+                            Нуждаете се от ремонт на бяла електротехника
+                        </p>
                         <Button
                             onClick={() => {
                                 router.push("#location");
@@ -214,12 +239,43 @@ function GallerySection() {
         {
             title: "Bosch",
             images: [
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
+                "INVERTER_3_UP_16x9.png",
+                "DRYER_1_UP_16x9.png",
+                "DRYER_2_UP_16x9.png",
+                "LOGIX_UP_16x9.png",
+                "NEC_UP_16x9.png",
+                "NEW_INVERTER_1_UP_16x9.png",
+                "SERIE_4_6_8_UP_16x9.png",
+            ],
+        },
+        {
+            title: "AEG",
+            images: [
+                "DISPLAY_2_UP_16x9.png",
+                "DRYER_1_UP_16x9.png",
+                "EWM09_UP_16x9.png",
+                "INVERTER_1_UP_16x9.png",
+                "INVERTER_3_UP_16x9.png",
+            ],
+        },
+        {
+            title: "Miele",
+            images: [
+                "DISPLAY_UP_16x9.png",
+                "EDITION_UP_16x9.png",
+                "ELFU_UP_16x9.png",
+                "ELP160_UP_16x9.png",
+            ],
+        },
+        {
+            title: "Others",
+            images: [
+                "ARISTON_DISPLAY_DRYER_UP_16x9.png",
+                "ARISTON_DRYER_NUCLEUS_UP_16x9.png",
+                "ARISTON_WINDY_3F_UP_16x9.png",
+                "ARISTON_WINDY_COL_UP_16x9.png",
+                "SAMSUNG_1_UP_16x9.png",
+                "SAMSUNG_FRIGE_UP_16x9.png",
             ],
         },
     ];
@@ -258,7 +314,12 @@ function LocationSection() {
                 </div>
                 <div className="w-full space-y-4 rounded-3xl border-2 border-[#063971] px-4 py-2">
                     <div className="flex items-center gap-1">
-                        <img src="/viber.svg" alt="Вайбър" width={36} />
+                        <Image
+                            src="/global/viber.svg"
+                            alt="Вайбър"
+                            width={36}
+                            height={36}
+                        />
                         <p>
                             Моля свържете се с мен чрез{" "}
                             <span className="font-bold text-purple-500 underline">
