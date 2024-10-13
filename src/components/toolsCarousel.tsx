@@ -44,7 +44,7 @@ export default function ToolsCarousel({ ...tool }: Tool) {
                                 className="flex aspect-video max-w-[300px] justify-center rounded-2xl border-b-2 border-gray-400 bg-black px-0 first:ml-4 md:max-w-[400px]"
                             >
                                 <img
-                                    src={`/gallery/${tool.title}/${image}`}
+                                    src={`/gallery/${tool.title.toLowerCase}/${image}`}
                                     alt={image}
                                     className="w-full"
                                 />
