@@ -28,13 +28,11 @@ function HeroSection() {
         {
             src: "/hero/AEG_DISPLAY_2_UP_16x9.png",
             alt: "AEG Display",
-            serNo: "215 789 3458",
         },
         { src: "/hero/BOSCH_NEC_UP_16x9.png", alt: "Bosch Nec Up" },
         {
             src: "/hero/MIELE_EDITION_UP_16x9.png",
             alt: "Miele Edition Up",
-            serNo: "215 789 3458",
         },
     ];
     const [next, setNext] = useState(0);
@@ -281,7 +279,7 @@ function GallerySection() {
             id="gallery"
             className="my-10 flex w-full flex-col items-center"
         >
-            <h1 className="max-w-4xl text-center text-3xl md:text-5xl">
+            <h1 className="max-w-4xl text-center text-3xl md:text-4xl lg:text-5xl">
                 Галерия
             </h1>
             {tools.map((tool, index) => (
@@ -298,7 +296,7 @@ function LocationSection() {
         >
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.732935299655!2d27.915633569806786!3d43.21851176439716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4546c3f4749f9%3A0xfc264caf43ad9b6d!2z0JLQsNGA0L3QsCDQptC10L3RgtGK0YDQn9GA0LjQvNC-0YDRgdC60LgsINGD0LsuIOKAntCf0L7Qu9C60L7QstC90LjQuiDQodCy0LXRidCw0YDQvtCy4oCcIDEwLCA5MDAyINCS0LDRgNC90LA!5e0!3m2!1sbg!2sbg!4v1727845336376!5m2!1sbg!2sbg"
-                className="h-[300px] w-full max-w-[800px] rounded-xl border-none md:h-[600px] md:rounded-[70px]"
+                className="h-[300px] w-full max-w-[800px] rounded-xl border-none md:h-[400px] md:rounded-[70px] lg:h-[600px]"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -314,8 +312,9 @@ function LocationSection() {
                         <Image
                             src="/global/viber.svg"
                             alt="Вайбър"
-                            width={36}
-                            height={36}
+                            width={30}
+                            height={30}
+                            className="-ml-0.5"
                         />
                         <p>
                             Можете да се свържете с нас чрез{" "}
@@ -340,7 +339,7 @@ function LocationSection() {
                     </div>
                     <div className="flex items-center gap-1">
                         <Briefcase />
-                        <p>Понеделник до Петък</p>
+                        <p>Понеделник до Събота</p>
                     </div>
                 </div>
             </div>
