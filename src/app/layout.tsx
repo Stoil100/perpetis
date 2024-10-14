@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import TopBar from "@/components/topbar";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -75,8 +76,9 @@ export default function RootLayout({
                 <link rel="manifest" href="/site.webmanifest" />
             </head>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} font-helvetica overflow-x-hidden antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} font-helvetica flex flex-col overflow-x-hidden antialiased`}
             >
+                <TopBar />
                 <Navigation />
                 {children}
                 <Footer />
