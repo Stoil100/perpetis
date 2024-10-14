@@ -71,7 +71,7 @@ function HeroSection() {
 
                     <div className="z-10 text-[2rem] md:absolute md:text-[3.9vw]">
                         <span className="inline-block bg-white pr-4 md:rounded-br-xl md:rounded-tr-xl lg:rounded-br-3xl lg:rounded-tr-3xl">
-                            Твоят сервиз за бяла
+                            Твоят сервиз за битова
                         </span>
                         <div className="flex">
                             <span className="inline-block rounded-br-xl bg-white pr-4 lg:rounded-br-3xl">
