@@ -72,7 +72,37 @@ export const metadata: Metadata = {
         },
     ],
     manifest: "/site.webmanifest",
+    openGraph: {
+        title: "Перпетис сервиз - Ремонт на битова електроника",
+        description:
+            "Ремонт на платки за перални ➤ сушилни ➤ миялни ➤ хладилници ➤ фурни и климатици",
+        url: "https://www.perpetis-serviz.com/",
+        siteName: "Perpetis-serviz.com",
+        images: [
+            {
+                url: "/hero/AEG_DISPLAY_2_UP-16x9.png", // Заменете с реалния URL на изображението
+                alt: "Перпетис сервиз - Ремонт на битова електроника",
+            },
+        ],
+        locale: "bg_BG",
+        type: "website",
+    },
+    twitter: {
+        card: "summary",
+        title: "Перпетис сервиз",
+        description:
+            "Ремонт на платки за перални ➤ сушилни ➤ миялни ➤ хладилници ➤ фурни и климатици",
+        // If you have a Twitter handle, include it here. Otherwise, you can omit the 'site' property.
+        // site: "@YourTwitterHandle",
+        images: [
+            {
+                url: "/global/electronics.svg", // Заменете с реалния URL на изображението
+                alt: "Перпетис лого",
+            },
+        ],
+    },
 };
+
 
 export default function RootLayout({
     children,
